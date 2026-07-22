@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String str = sc.nextLine().toLowerCase();
+
+        System.out.print("Vowels: ");
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if ("aeiou".indexOf(ch) != -1)
+                System.out.print(ch + " ");
+        }
+
+        System.out.println();
+
+        System.out.print("Consonants: ");
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+            if (Character.isLetter(ch) && "aeiou".indexOf(ch) == -1)
+                System.out.print(ch + " ");
+        }
+    }
+}
