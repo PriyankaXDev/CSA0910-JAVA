@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int num = 27;
+
+        if (num <= 0) {
+            System.out.println("false");
+            return;
+        }
+
+        while (num % 3 == 0) {
+            num = num / 3;
+        }
+
+        if (num == 1) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
