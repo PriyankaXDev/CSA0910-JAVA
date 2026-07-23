@@ -1,0 +1,27 @@
+public class Main {
+
+    static double calculateInterest(double principal, int years, char senior) {
+        double rate;
+
+        if (senior == 'y' || senior == 'Y') {
+            rate = 12;
+        } else {
+            rate = 10;
+        }
+
+        return (principal * rate * years) / 100;
+    }
+
+    public static void main(String[] args) {
+        double principal = 200000;
+        int years = 3;
+        char senior = 'n';
+
+        double interest = calculateInterest(principal, years, senior);
+
+        System.out.println("Principal Amount: " + principal);
+        System.out.println("Years: " + years);
+        System.out.println("Senior Citizen: " + senior);
+        System.out.println("Interest: " + interest);
+    }
+}
