@@ -1,0 +1,19 @@
+class Overload {
+
+    void display(int a, int b) {
+        System.out.println("Sum of Two Numbers: " + (a + b));
+    }
+
+    void display(int a, int b, int c) {
+        System.out.println("Sum of Three Numbers: " + (a + b + c));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Overload obj = new Overload();
+
+        obj.display(10, 20);
+        obj.display(10, 20, 30);
+    }
+}
