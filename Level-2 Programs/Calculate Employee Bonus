@@ -1,0 +1,31 @@
+public class EmployeeBonus {
+    public static void main(String[] args) {
+        char grade = 'B';
+        double salary = 50000;
+        double bonus = 0;
+
+        if(salary < 0) {
+            System.out.println("Invalid Salary");
+            return;
+        }
+
+        if(grade == 'A' || grade == 'a') {
+            bonus = salary * 0.05;
+        }
+        else if(grade == 'B' || grade == 'b') {
+            bonus = salary * 0.10;
+        }
+        else {
+            System.out.println("Invalid Grade");
+            return;
+        }
+
+        if(salary < 10000) {
+            bonus = bonus + (salary * 0.02);
+        }
+
+        System.out.println("Salary = " + salary);
+        System.out.println("Bonus = " + bonus);
+        System.out.println("Total to be paid = " + (salary + bonus));
+    }
+}
