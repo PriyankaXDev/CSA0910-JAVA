@@ -2,6 +2,16 @@ class Bank {
     double getRateOfInterest() {
         return 0;
     }
+
+    public static void main(String[] args) {
+        SBI sbi = new SBI();
+        ICICI icici = new ICICI();
+        AXIS axis = new AXIS();
+
+        System.out.println("SBI Rate of Interest: " + sbi.getRateOfInterest() + "%");
+        System.out.println("ICICI Rate of Interest: " + icici.getRateOfInterest() + "%");
+        System.out.println("AXIS Rate of Interest: " + axis.getRateOfInterest() + "%");
+    }
 }
 
 class SBI extends Bank {
@@ -19,14 +29,5 @@ class ICICI extends Bank {
 class AXIS extends Bank {
     double getRateOfInterest() {
         return 9.7;
-    }
-}
-
-public class BankInterest {
-    public static void main(String[] args) {
-        Bank bank = new SBI();
-
-        System.out.println("Bank : SBI");
-        System.out.println("Rate of Interest : " + bank.getRateOfInterest() + "%");
     }
 }
