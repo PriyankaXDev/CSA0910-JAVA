@@ -1,0 +1,17 @@
+public class ATMBalance {
+    public static void main(String[] args) {
+        int denomination1 = 500;
+        int notes1 = 4;
+        int denomination2 = 100;
+        int notes2 = 20;
+        int denomination3 = 200;
+        int notes3 = 32;
+        int denomination4 = 2000;
+        int notes4 = 1;
+        int totalBalance = (denomination1 * notes1)
+                         + (denomination2 * notes2)
+                         + (denomination3 * notes3)
+                         + (denomination4 * notes4);
+        System.out.println("Total Available Balance in ATM: " + totalBalance);
+    }
+}
