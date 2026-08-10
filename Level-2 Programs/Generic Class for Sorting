@@ -1,0 +1,26 @@
+import java.util.Arrays;
+
+class Sort<T extends Comparable<T>> {
+    T[] arr;
+
+    Sort(T[] arr) {
+        this.arr = arr;
+    }
+
+    void sort() {
+        Arrays.sort(arr);
+
+        for (T x : arr)
+            System.out.print(x + " ");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Integer[] numbers = {5, 2, 8, 1, 3};
+
+        Sort<Integer> obj = new Sort<>(numbers);
+
+        obj.sort();
+    }
+}
