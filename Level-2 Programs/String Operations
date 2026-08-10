@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "Welcome to Saveetha university";
+        String oldWord = "Saveetha";
+        String newWord = "Chennai";
+
+        String replaced = str.replace(oldWord, newWord);
+
+        System.out.println("Original String: " + str);
+        System.out.println("After Replacement: " + replaced);
+        System.out.println("Length: " + str.length());
+        System.out.println("Uppercase: " + str.toUpperCase());
+    }
+}
