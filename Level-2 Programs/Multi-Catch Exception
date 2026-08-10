@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        int choice = 1;
+
+        try {
+            if (choice == 1) {
+                int a = 10 / 0;
+            } else if (choice == 2) {
+                int[] arr = {1, 2, 3};
+                System.out.println(arr[5]);
+            } else {
+                String str = null;
+                System.out.println(str.length());
+            }
+        } catch (ArithmeticException |
+                 ArrayIndexOutOfBoundsException |
+                 NullPointerException e) {
+            System.out.println("Exception: " + e);
+        }
+    }
+}
