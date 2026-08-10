@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        int a = 20;
+        int b = 0;
+
+        try {
+            System.out.println("Addition = " + (a + b));
+            System.out.println("Subtraction = " + (a - b));
+            System.out.println("Multiplication = " + (a * b));
+
+            if (b == 0)
+                throw new ArithmeticException("Division by Zero");
+
+            System.out.println("Division = " + (a / b));
+
+        } catch (ArithmeticException e) {
+            System.out.println("Exception: " + e.getMessage());
+        }
+    }
+}
