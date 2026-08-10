@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Map<Integer, String> employees = new HashMap<>();
+
+        employees.put(101, "Vishal");
+        employees.put(102, "Sedhu");
+        employees.put(103, "Hari");
+
+        System.out.println("Employees: " + employees);
+        System.out.println("Is Empty: " + employees.isEmpty());
+
+        employees.remove(102);
+
+        System.out.println("After Remove: " + employees);
+
+        employees.clear();
+
+        System.out.println("After Clear: " + employees);
+    }
+}
