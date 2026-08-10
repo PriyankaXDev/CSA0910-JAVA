@@ -1,0 +1,34 @@
+public class Main {
+
+    static int count = 0;
+
+    static void generate(int[] freq) {
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] == 0)
+                continue;
+
+            count++;
+
+            freq[i]--;
+
+            generate(freq);
+
+            freq[i]++;
+        }
+    }
+
+    public static void main(String[] args) {
+        String tiles = "AAB";
+
+        int[] freq = new int[26];
+
+        for (char c : tiles.toCharArray())
+            freq[c - 'A']++;
+
+        generate(freq);
+
+        System.out.println(
+            "Number of possible sequences = " + count
+        );
+    }
+}
