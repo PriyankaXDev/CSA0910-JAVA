@@ -1,0 +1,32 @@
+class PrimeCheck implements Runnable {
+    int num = 5;
+
+    public void run() {
+        if (num < 2) {
+            System.out.println(num + " is Not Prime");
+            return;
+        }
+
+        boolean prime = true;
+
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                prime = false;
+                break;
+            }
+        }
+
+        if (prime)
+            System.out.println(num + " is Prime");
+        else
+            System.out.println(num + " is Not Prime");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        PrimeCheck obj = new PrimeCheck();
+        Thread t = new Thread(obj);
+        t.start();
+    }
+}
